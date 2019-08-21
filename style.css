@@ -1,0 +1,12 @@
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+  color: steelblue;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+.calculator-icon {
+  color: #272727;
+}
