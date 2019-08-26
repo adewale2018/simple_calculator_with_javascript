@@ -21,11 +21,17 @@ let decimal = document.querySelector('.decimal'), clear = document.querySelector
 const buttons = [
                   zero, one, two, three, four, five, 
                   six, seven, eight, nine, addition, subtraction, 
-                  division, multiplication, decimal, clear,
+                  division, multiplication, decimal
                 ];
 for(let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener('click', () => {
-    screen.value = buttons[i].value;
-    console.log(buttons[i].value);
+    screen.value += buttons[i].value;
   });
 }
+clear.addEventListener('click', () => {
+  screen.value = clear.value;
+});
+
+equality.addEventListener('click', () => {
+  screen.value = eval(screen.value);
+});
