@@ -1,12 +1,129 @@
 body {
   font-family: 'Roboto Slab', serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #001f3f;
 }
-
-h1 {
-  color: steelblue;
+.main-container {
+  height: 80vh;
+  width: 410px;
+  margin: 60px auto;
+  border: 2px solid rgb(255, 69, 0);
+  border-top: 2px solid #fff;
+}
+.main-heading {
   text-align: center;
+  margin-top: 0;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 18px;
+}
+.main-heading h1 {
+  color: #fff;
   font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0px;
+  letter-spacing: 2px;
+  display: inline-block
+}
+h6 {
+  text-align: center;
+  background-color: rgb(255, 69, 0);
+  border: 1px solid #001f3f;
+  color: #fff;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  letter-spacing: 3px;
+  padding: 3px 50px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  display: inline-block;
 }
 .calculator-icon {
-  color: #272727;
+  color: rgb(255, 69, 0);
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.minor-container {
+  border: 1px solid #fff;
+  width: 75%;
+  height: 75%;
+  margin: 0 auto;
+}
+.screen {
+  width: 93%;
+  margin-bottom: 10px;
+}
+
+.sub-container {
+  display: grid;
+  width: 100%; 
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  /* border: 1px solid red; */
+}
+.clear {
+  grid-column: span 3;
+  width: 98%;
+}
+.equality {
+  grid-row: span 2;
+  height: 100%;
+}
+button {
+  background-color: rgb(0, 151, 167);
+  color: #fff;
+  outline: none;
+  width: 90%;
+  height: 50px;
+  border: 1px solid #001f3f;
+  border-radius: 4px;
+  font-size: 2rem;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin: 0 auto;
+}
+button:hover {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+input[type=text] {
+  padding: 10px;
+  border: 1px solid #001f3f;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+input[type=text]:focus {
+  border-color: #fff;
+}
+
+hr {
+  overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: #fff;
+    border-width: 2px 0 0 0;
+    border-radius: 20px;
+}
+hr:after {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: #fff;
+  border-width: 0 0 2px 0;
+  border-radius: 20px;
 }

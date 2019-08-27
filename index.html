@@ -10,50 +10,40 @@
   <title>Simple | Calculator | With | JavaScript</title>
 </head>
 <body>
-  <h1>Simple Calculator <span class="calculator-icon"><i class="fas fa-calculator"></i></span> With JavaScript</h1>
-  <div class="container">
-    <div class="output">
-      <input type="text" class="screen">
-    </div>
-    <div class="sub-container">
-      <div>
+  <div class="main-container">
+    <header class="main-heading">
+      <span class="calculator-icon"><i class="fas fa-calculator"></i></span>
+      <h1>
+        A Simple Calculator
+      </h1><span class="calculator-icon"><i class="fas fa-calculator"></i></span>
+      <br>
+      <h6> ...built with JavaScript</h6>
+    </header>
+    <div class="minor-container">
+      <div class="output">
+        <input type="text" class="screen" disabled>
+      </div>
+      <div class="sub-container">
         <button value=" + " class="addition">&#43;</button>
         <button value=" - " class="subtraction">&#8722;</button>
         <button value=" / " class="division">&#247;</button>
         <button value=" * " class="multiplication">&#215;</button>
-      </div>
-      <div>
         <button value="7" class="seven">7</button>
         <button value="8" class="eight">8</button>
         <button value="9" class="nine">9</button>
-        
-      </div>
-      <div>
+        <button value=" = " class="equality">&#61;</button>
         <button value="4" class="four">4</button>
         <button value="5" class="five">5</button>
         <button value="6" class="six">6</button>
-        
-      </div>
-      <div>
         <button value="1" class="one">1</button>
         <button value="2" class="two">2</button>
         <button value="3" class="three">3</button>
-        
-      </div>
-      <div>
-        <button value="0" class="zero">0</button>
         <button value="." class="decimal">.</button>
+        <button value="0" class="zero">0</button>
         <button value="" class="clear">AC</button>
-        
       </div>
-      <div>
-        <button value=" = " class="equality">&#61;</button>
-      </div>
-      
     </div>
   </div>
-
-
 
   <script src="main.js"></script>
 </body>
