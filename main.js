@@ -12,7 +12,7 @@ let zero  = document.querySelector('.zero'),  one   = document.querySelector('.o
 let addition = document.querySelector('.addition'), subtraction = document.querySelector('.subtraction'),
     division = document.querySelector('.division'), multiplication = document.querySelector('.multiplication');
 
-//Target other buttons ., AC, =
+//Target other buttons / ., AC, = /
 
 let decimal = document.querySelector('.decimal'), clear = document.querySelector('.clear'),
   equality = document.querySelector('.equality');
