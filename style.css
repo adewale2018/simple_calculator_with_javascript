@@ -43,6 +43,7 @@ input[type=text]{
   color: #fff;
   border: 3px solid #fff;
   margin-bottom: .2em;
+  text-align: right;
 }
 .sub-container {
   display: grid;
@@ -78,6 +79,7 @@ button {
 button:hover {
   background-color: transparent;
   border: 1px solid #fff;
+  cursor: pointer;
 }
 
 @media (max-width: 520px) {
