@@ -1,10 +1,10 @@
 
 
-## `A sIMPLE CALCULATOR BUILT WITH PURE JAVASCRIPT`
+## `A SIMPLE CALCULATOR BUILT WITH PURE JAVASCRIPT`
 
 
-### `The calculator can perform simple operations on numbers like addition
- subtraction, multiplication and division.`
+### `The calculator can perform simple operations on numbers` like addition
+ subtraction, multiplication and division.
 
 ### Link To View The Project:
 
