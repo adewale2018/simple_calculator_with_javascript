@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://kit.fontawesome.com/c9b69548ec.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
   <title>Simple | Calculator | With | JavaScript</title>
 </head>
+
 <body>
-  <div class="main-container">
-    <header class="main-heading">
-      <span class="calculator-icon"><i class="fas fa-calculator"></i></span>
-      <h1>
-        A Simple Calculator
-      </h1><span class="calculator-icon"><i class="fas fa-calculator"></i></span>
-    </header>
-    <div class="minor-container">
-      <input type="text" class="screen" disabled>
-      <div class="sub-container">
-        <button value=" + " class="addition">&#43;</button>
-        <button value=" - " class="subtraction">&#8722;</button>
-        <button value=" / " class="division">&#247;</button>
-        <button value=" * " class="multiplication">&#215;</button>
-        <button value="7" class="seven">7</button>
-        <button value="8" class="eight">8</button>
-        <button value="9" class="nine">9</button>
-        <button value="" class="clear">AC</button>
-        <button value="4" class="four">4</button>
-        <button value="5" class="five">5</button>
-        <button value="6" class="six">6</button>
-        <button value="1" class="one">1</button>
-        <button value="2" class="two">2</button>
-        <button value="3" class="three">3</button>
-        <button value="." class="decimal">.</button>
-        <button value="0" class="zero">0</button>
-        <button value=" = " class="equality">&#61;</button>
+  <h1>Simple Calculator</h1>
+  <div class="calc">
+    <section class="screen">
+      0
+    </section>
+
+    <section class="calc-buttons">
+      <div class="calc-button-row">
+        <button class="calc-button double ">C</button>
+        <button class="calc-button">&#8592;</button>
+        <button class="calc-button">&#247;</button>
       </div>
-    </div>
+      <div class="calc-button-row">
+        <button class="calc-button">7</button>
+        <button class="calc-button">8</button>
+        <button class="calc-button">9</button>
+        <button class="calc-button">&#215;</button>
+      </div>
+      <div class="calc-button-row">
+        <button class="calc-button">4</button>
+        <button class="calc-button">5</button>
+        <button class="calc-button">6</button>
+        <button class="calc-button">&#8722;</button>
+      </div>
+      <div class="calc-button-row">
+        <button class="calc-button">1</button>
+        <button class="calc-button">2</button>
+        <button class="calc-button">3</button>
+        <button class="calc-button">&#43;</button>
+      </div>
+      <div class="calc-button-row">
+        <button class="calc-button triple">0</button>
+        <button class="calc-button">&#61;</button>
+      </div>
+    </section>
   </div>
+
 
   <script src="main.js"></script>
 </body>
+
 </html>

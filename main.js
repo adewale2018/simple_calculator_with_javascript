@@ -1,37 +1,91 @@
-//Target the result output
-let screen = document.querySelector('.screen');
+let runningTotal = 0;
+let buffer = "0";
+let previousOperator;
 
-// Target the buttons with numbers 0-9 using DOM 
-let zero  = document.querySelector('.zero'),  one   = document.querySelector('.one') ,
-    two   = document.querySelector('.two'),   three = document.querySelector('.three'), 
-    four  = document.querySelector('.four'),  five  = document.querySelector('.five'),
-    six   = document.querySelector('.six'),   seven = document.querySelector('.seven'), 
-    eight = document.querySelector('.eight'), nine  = document.querySelector('.nine');
+const screen = document.querySelector(".screen");
 
-// Target the buttons for the operations +, -, /, *
-let addition = document.querySelector('.addition'), subtraction = document.querySelector('.subtraction'),
-    division = document.querySelector('.division'), multiplication = document.querySelector('.multiplication');
-
-//Target other buttons / ., AC, = /
-
-let decimal = document.querySelector('.decimal'), clear = document.querySelector('.clear'),
-  equality = document.querySelector('.equality');
-
-//add EventListener to the buttons
-const buttons = [
-                  zero, one, two, three, four, five, 
-                  six, seven, eight, nine, addition, subtraction, 
-                  division, multiplication, decimal
-                ];
-for(let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener('click', () => {
-    screen.value += buttons[i].value;
-  });
+function buttonClick(value) {
+  if (isNaN(value)) {
+    // this is not a number
+    handleSymbol(value);
+  } else {
+    // this is a number
+    handleNumber(value);
+  }
+  screen.innerText = buffer;
 }
-clear.addEventListener('click', () => {
-  screen.value = clear.value;
-});
+function handleSymbol(symbol) {
+  switch (symbol) {
+    case "C":
+      buffer = "0";
+      runningTotal = 0;
+      break;
+    case "=":
+      if (previousOperator === null) {
+        return;
+      }
+      flushOperation(parseInt(buffer));
+      previousOperator = null;
+      buffer = runningTotal;
+      runningTotal = 0;
+      break;
+    case "←":
+      if (buffer.length === 1) {
+        buffer = "0";
+      } else {
+        buffer = buffer.substring(0, buffer.length - 1);
+      }
+      break;
+    case "÷":
+    case "×":
+    case "−":
+    case "+":
+      handleMath(symbol);
+      break;
+  }
+}
+function handleMath(symbol) {
+  if (buffer === "0") {
+    // do nothing
+    return;
+  }
+  // const intBuffer = parseInt(buffer); this line and next line is the same.
+  const intBuffer = +buffer;
+  if (runningTotal === 0) {
+    runningTotal = intBuffer;
+  } else {
+    flushOperation(intBuffer);
+  }
 
-equality.addEventListener('click', () => {
-  screen.value = eval(screen.value);
-});
+  previousOperator = symbol;
+  buffer = "0";
+}
+function flushOperation(intBuffer) {
+  if (previousOperator === "+") {
+    runningTotal += intBuffer;
+  } else if (previousOperator === "−") {
+    runningTotal -= intBuffer;
+  } else if (previousOperator === "×") {
+    runningTotal *= intBuffer;
+  } else {
+    runningTotal /= intBuffer;
+  }
+}
+
+function handleNumber(numberString) {
+  if (buffer === "0") {
+    buffer = numberString;
+  } else {
+    buffer += numberString;
+  }
+}
+
+function init() {
+  document
+    .querySelector(".calc-buttons")
+    .addEventListener("click", function(event) {
+      buttonClick(event.target.innerText);
+    });
+}
+
+init();
